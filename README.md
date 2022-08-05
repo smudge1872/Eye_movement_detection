@@ -46,3 +46,17 @@ A matlab script, [generate_h5_files_fromEDF.m](https://github.com/smudge1872/Eye
   
   ...
 ```
+
+Run the script in matlab
+
+## Running the detection algorithm
+ The [sampleConfig.ini](https://github.com/smudge1872/Eye_movement_detection/blob/main/code/pytorchAlgorithm/sampleConfig.ini) specifies the input folder name that has the h5 files, model file name, and the output directory where the detection output is stored in .csv and pkl files. There are 5 model files files in the trainedModels folder corresponding to the learned models in 5 fold cross validation.
+ ```ini
+ [DEFAULT]
+inputFolderName=/users/sjschmug/coma/githubRepo/h5_examples/17/	
+modelFileName=/users/sjschmug/coma/githubRepo/Eye_movement_detection/trainedModels/fold_4_twoLayer_model_00029.pt
+outputdir=/users/sjschmug/coma/githubRepo/sampleOutput/
+#Should not need to change anything below this line
+...
+```
+To run the algorithm, 
