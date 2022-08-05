@@ -4,13 +4,19 @@
 addpath(genpath('./edfread'));
 
 %Generated h5 files are saved here
-exampleSaveDir = 'F:/coma/examples/githubExamples/';
+exampleSaveDir = '/users/sjschmug/coma/githubRepo/h5_examples/';
 
-currEDFPath = 'F:/coma/data/data/sleep_study_50/data/17/EX6X7PHEZ99S3PGO.edf';
-patientNum = 17; %Prefix str num for all generated h5 files
+%Prefix str num for all generated h5 files and sub folder name to create
+patientNum = 17; 
 
-extractionOffsetStartHour = 0;  %At what hour should extraction begin. 0 means beginning of file
-howManyHoursToExtract = 1;  %How many hours to extract
+%Path to EDF file
+currEDFPath = '/projects/mcshin_research/coma/data/sleep_study_50/data/17/EX6X7PHEZ99S3PGO.edf';
+
+%At what hour should extraction begin. 0 means beginning of file
+extractionOffsetStartHour = 0;
+  
+%How many hours to extract
+howManyHoursToExtract = 1;  
 
 waveSampleRate = 200;  %Model is trained for 200 Hz 9 channels
 numWaveFeatures = 9;  %9
