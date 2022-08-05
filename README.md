@@ -4,6 +4,7 @@
 Files to run trained model on EOG, EEG data to detect eye movement.
 
 ## Requirements
+- python 3.7
 - pytorch 1.10.2
 - list of python packages in [requirements.txt](https://github.com/smudge1872/Eye_movement_detection/blob/main/requirements.txt)
 
@@ -47,7 +48,7 @@ A matlab script, [generate_h5_files_fromEDF.m](https://github.com/smudge1872/Eye
   ...
 ```
 
-Run the script in matlab
+Run the script in matlab in the directory that generate_h5_files_fromEDF.m is stored.
 
 ## Running the detection algorithm
  The [sampleConfig.ini](https://github.com/smudge1872/Eye_movement_detection/blob/main/code/pytorchAlgorithm/sampleConfig.ini) specifies the input folder name that has the h5 files, model file name, and the output directory where the detection output is stored in .csv and pkl files. There are 5 model files files in the trainedModels folder corresponding to the learned models in 5 fold cross validation.
@@ -59,4 +60,34 @@ outputdir=/users/sjschmug/coma/githubRepo/sampleOutput/
 #Should not need to change anything below this line
 ...
 ```
-To run the algorithm, 
+To run the algorithm, run the python file from the directory that runEyeMoveDetOnH5s.py is stored.
+
+<code>python runEyeMoveDetOnH5s.py --configFile=sampleConfig.ini</code>
+
+## Viewing the results
+After running the program, the results are stored in a .csv file in the output directory. For each row specify the timestamp, a 1 for movement detection, and the probablity from the LSTM of it being movement.
+```
+ Write out csv file /users/sjschmug/coma/githubRepo/sampleOutput/TestOutput.csv
+patientNum      timeStamp(HH:MM:SS)     Predict_Movement        Movement_probability
+17      21:10:30        1       0.999919
+17      21:10:31        1       0.999334
+17      21:10:32        1       0.999937
+17      21:10:33        0       0.002465
+17      21:10:34        1       0.961771
+17      21:10:35        0       0.241561
+17      21:10:36        0       0.270810
+17      21:10:37        0       0.001691
+17      21:10:38        1       0.992395
+17      21:10:39        1       0.991694
+17      21:10:40        1       0.972022
+17      21:10:41        1       1.000000
+17      21:10:42        1       1.000000
+17      21:10:43        0       0.140938
+17      21:10:44        0       0.000340
+17      21:10:45        0       0.000917
+17      21:10:46        0       0.006324
+17      21:10:47        1       0.780297
+17      21:10:48        0       0.004094
+17      21:10:49        0       0.001750
+ 
+```
