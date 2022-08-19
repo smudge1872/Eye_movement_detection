@@ -1,12 +1,15 @@
-8/4/2022
+8/19/2022
 
 # Eye_movement_detection
-Files to run trained model on EOG, EEG data to detect eye movement.
+Files to run trained model on EOG, EEG data to detect eye movement. This is from the paper "A Machine Learning Eye Movement Detection Algorithm using Electrooculography" by Dupre et. al. 
 
 ## Requirements
 - python 3.7
 - pytorch 1.10.2
 - list of python packages in [requirements.txt](https://github.com/smudge1872/Eye_movement_detection/blob/main/requirements.txt)
+
+## Trained Models
+The five trained pytorch models for eye movement detection are in trainedModels folder.
 
 ## Data
 - Input file should be edf with file with sampling rate of 200Hz with channel names
