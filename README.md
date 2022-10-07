@@ -12,7 +12,7 @@ Files to run trained model on EOG, EEG data to detect eye movement. This is from
 The five trained pytorch models for eye movement detection are in trainedModels folder.
 
 ## Data
-- Input file should be edf with file with sampling rate of 200Hz with channel names
+- Input file should be an edf file with sampling rate of 200Hz with channel names
   - F3-A2
   - A1-F4
   - A2-C3
