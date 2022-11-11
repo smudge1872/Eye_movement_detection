@@ -1,7 +1,7 @@
 10/7/2022
 
 # Eye_movement_detection
-Files to run trained model on EOG, EEG data to detect eye movement. This is from the paper "A Machine Learning Eye Movement Detection Algorithm using Electrooculography" by Dupre et. al. It is published in SLEEP Oct 2018 https://doi.org/10.1093/sleep/zsac254.
+Files to run trained model on EOG, EEG data to detect eye movement. This is from the paper "A Machine Learning Eye Movement Detection Algorithm using Electrooculography" by Dupre et. al. It is published in SLEEP Oct 2022 https://doi.org/10.1093/sleep/zsac254.
 
 ## Requirements
 - python 3.7
