@@ -13,7 +13,7 @@ The five trained pytorch models for eye movement detection are in trainedModels 
 
 ## Data
 - Input file should be an edf file with sampling rate of 200Hz with channel names
-  - F3-A2
+  - A2-F3
   - A1-F4
   - A2-C3
   - A1-C4
