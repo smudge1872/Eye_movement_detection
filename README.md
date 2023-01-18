@@ -21,7 +21,7 @@ The five trained pytorch models for eye movement detection are in trainedModels 
   - A1-O2
   - A2-PG1  This is LOC
   - A1-PG2  This is ROC
-  - PZ-CZ
+  - CZ-PZ
   
 ## Generate h5 examples
 A matlab script, [generate_h5_files_fromEDF.m](https://github.com/smudge1872/Eye_movement_detection/blob/main/code/exampleGeneration/generate_h5_files_fromEDF.m), opens the EDF file and does some signal smoothing using some filters and saves the data in h5 files for the pytorch program to read. Each h5 it saves out is one second. To configure for your data, change the <code> currEDFPath </code> string variable to the path of your edf file. Also change the <code> exampleSaveDir </code> string variable to the path where you want the output data saved. Set the <code> patientNum </code> to a number prefix for the subfolder that is created for the edf file (Typically a patient id number).  Set the <code>extractionOffsetStartHour</code> variable to how many hours past the beginning of the file to start extracting. Set this to 0 if want to start at the beginning of the file. Also set <code>howManyHoursToExtract</code> for how many hours you want to extract from that start point.
